@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+</head>
+<body>
+    <div id="toolbar">
+        <!-- Existing buttons -->
+        <button id="pen"><i class="ri-pencil-line"></i> Pen</button>
+        <button id="eraser"><i class="ri-eraser-line"></i> Eraser</button>
+        <button id="undo"><i class="ri-arrow-go-back-line"></i> Undo</button>
+        <button id="redo"><i class="ri-arrow-go-forward-line"></i> Redo</button>
+        <button id="delete"><i class="ri-delete-bin-6-line"></i> Delete</button>
+        <button id="text"><i class="ri-text"></i> Text</button>
+        
+        <!-- Save and Export buttons -->
+        <button id="save-image"><i class="ri-save-line"></i> Save as Image</button>
+        <button id="save-pdf"><i class="ri-file-pdf-line"></i> Save as PDF</button>
+        
+        <!-- Recording buttons -->
+        <button id="record"><i class="ri-record-circle-line"></i> Start Recording</button>
+        <button id="stop-record" style="display: none;"><i class="ri-stop-circle-line"></i> Stop Recording</button>
+        <a id="download-link" style="display: none;">Download Video</a>
+        
+        <!-- Color picker and size slider -->
+        <input type="color" id="color-picker" value="#000000">
+        <label for="size-slider">Size:</label>
+        <input type="range" id="size-slider" min="1" max="50" value="5">
+        <span id="size-display"></span>
+        
+        <!-- Text tool settings -->
+        <div id="text-settings" style="display: none;">
+            <input type="text" id="text-input" placeholder="Enter text">
+            <select id="font-size">
+                <option value="20">20px</option>
+                <option value="30">30px</option>
+                <option value="40">40px</option>
+                <option value="50">50px</option>
+            </select>
+            <select id="font-family">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </div>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js"></script>
+
+
+</body>
+</html>

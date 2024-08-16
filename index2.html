@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="toolbar">
+        <button id="penBtn"><i class="ri-pencil-line"></i></button>
+        <button id="eraserBtn"><i class="ri-eraser-line"></i></button>
+        <button id="undoBtn"><i class="ri-arrow-go-back-line"></i></button>
+        <button id="redoBtn"><i class="ri-arrow-go-forward-line"></i></button>
+        <button id="deleteBtn"><i class="ri-delete-bin-6-line"></i></button>
+        <!-- <input type="color" id="penColorPicker" value="#000000"> -->
+        <input type="range" id="sizeSlider" min="1" max="50" value="5">
+    </div>
+    <div class="color-palette">
+        <input type="color" id="penColorPicker" value="#000000">
+        <button class="color-btn" style="background-color: #FF5733;" data-color="#FF5733"></button>
+        <button class="color-btn" style="background-color: #33FF57;" data-color="#33FF57"></button>
+        <button class="color-btn" style="background-color: #3357FF;" data-color="#3357FF"></button>
+        <button class="color-btn" style="background-color: #FFC300;" data-color="#FFC300"></button>
+        <button class="color-btn" style="background-color: #8E44AD;" data-color="#8E44AD"></button>
+        <!-- Add more colors as needed -->
+    </div>
+    
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script src="script2.js"></script>
+</body>
+</html>

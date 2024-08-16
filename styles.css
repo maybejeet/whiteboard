@@ -1,0 +1,132 @@
+/* Basic reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+#toolbar button, #toolbar input[type="color"], #toolbar input[type="range"], #toolbar select {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#toolbar button:hover, #toolbar input[type="color"]:hover, #toolbar input[type="range"]:hover, #toolbar select:hover {
+    background-color: #e0e0e0;
+}
+
+#toolbar button {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+}
+
+#toolbar button i {
+    margin-right: 5px;
+}
+
+#toolbar input[type="color"] {
+    border: 1px solid #ddd;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#toolbar input[type="range"] {
+    width: 150px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: transparent;
+    position: relative;
+}
+
+#toolbar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+#toolbar input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+#size-display {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000; /* Initial color, will be updated dynamically */
+    position: relative;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Canvas styles */
+#canvas {
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    cursor: url("https://example.com/pen-cursor.png") 10 10, auto; /* Default pen cursor */
+}
+
+#canvas.eraser-cursor {
+    cursor: url("https://example.com/eraser-cursor.png") 10 10, auto; /* Eraser cursor */
+}
+
+#text-settings {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#text-settings input[type="text"], #text-settings select {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    #toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #toolbar button, #toolbar input[type="color"], #toolbar input[type="range"], #toolbar select {
+        margin-bottom: 10px;
+    }
+}
